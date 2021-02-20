@@ -24,13 +24,13 @@ body {
   grid-gap: 25px;
 }
 
-.search {
+.search-box {
   height: 100px;
   display: flex;
   align-items: center;
 }
 
-#search-box {
+#search {
   margin: auto;
   height: 35px;
   width: 50%;
@@ -38,6 +38,6 @@ body {
   border-radius: 4px;
 }
 
-#search-box::placeholder {
+#search::placeholder {
   padding-left: 0.5em;
 }

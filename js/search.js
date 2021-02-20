@@ -1,14 +1,16 @@
-function search() {
-  let search = document.querySelector('#search-box').value;
-  const allCaptions = document.querySelectorAll('a');
+function handleSearch() {
+  let search = document.querySelector('#search').value;
   search = search.toLowerCase();
+  const allCaptions = document.querySelectorAll('a');
 
-  for (i = 0; i < allCaptions.length; i++) {  
-    if (allCaptions[i].attributes[1].nodeValue.toLowerCase().includes(search)) { 
-      allCaptions[i].style.display="initial"; 
+  allCaptions.forEach(caption => {
+    if (caption.attributes[1].nodeValue.toLowerCase().includes(search)) { 
+      caption.style.display="initial"; 
     } 
     else { 
-      allCaptions[i].style.display="none";                  
+      caption.style.display="none";                  
     } 
-  } 
+  })
 }
+
+search.addEventListener('keyup', handleSearch);
